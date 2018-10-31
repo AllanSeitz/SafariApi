@@ -9,20 +9,17 @@ namespace SafariApi.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  public class SeenAnimalsController : ControllerBase
+  public class SearchController : ControllerBase
   {
     [HttpGet]
-    //https://localhost:5001/api/SeenAnimals
-    public IEnumerable<SeenAnimals> Get()
+    public IQueryable<SeenAnimals> Search(string searchTerm)
     {
       var db = new SeenAnimalsContext();
-      return db.SeenAnimals.OrderBy(o => o.CountOfTimesSeen);
-    }
 
-    [HttpPut("{id}")]
-    public void Put(int id, [FromBody] string value)
-    {
-    }
+      var results = db.SeenAnimals.Where(w => w.Species.ToLower().Contains(searchTerm.ToLower()));
 
+      return results;
+      //https://localhost:5001/api/search?searchTerm=Li
+    }
   }
 }
