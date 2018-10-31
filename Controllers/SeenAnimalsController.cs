@@ -12,16 +12,55 @@ namespace SafariApi.Controllers
   public class SeenAnimalsController : ControllerBase
   {
     [HttpGet]
-    //https://localhost:5001/api/SeenAnimals
+    //https://localhost:5001/api/SeenAnimals 
+    //In order by times seen
     public IEnumerable<SeenAnimals> Get()
     {
       var db = new SeenAnimalsContext();
       return db.SeenAnimals.OrderBy(o => o.CountOfTimesSeen);
     }
+    [HttpPost]
+    public ActionResult<SeenAnimals> Post([FromBody] SeenAnimals seenAnimals)
+    {
+      var db = new SeenAnimalsContext();
+      db.SeenAnimals.Add(seenAnimals);
+      db.SaveChanges();
+      return seenAnimals;
+    }
+
+
+    [HttpDelete("{id}")]
+    //https://localhost:5001/api/SeenAnimals/1 
+    public ActionResult Delete(int id)
+    {
+      var db = new SeenAnimalsContext();
+      var animal = db.SeenAnimals.FirstOrDefault(a => a.Id == id);
+      if (animal == null)
+      {
+        return NotFound();
+      }
+      db.SeenAnimals.Remove(animal);
+      //save changed
+      db.SaveChanges();
+      //return 200
+      return Ok();
+    }
 
     [HttpPut("{id}")]
-    public void Put(int id, [FromBody] string value)
+    //https://localhost:5001/api/SeenAnimals/3 
+    public ActionResult<SeenAnimals> Put([FromRoute] int id, [FromBody] SeenAnimals updatedData)
     {
+      //The actual update
+      var db = new SeenAnimalsContext();
+      var seenAnimals = db.SeenAnimals.FirstOrDefault(animal => animal.Id == id);
+
+      seenAnimals.Species = updatedData.Species;
+      seenAnimals.CountOfTimesSeen = updatedData.CountOfTimesSeen;
+      seenAnimals.LocationOfLastSeen = updatedData.LocationOfLastSeen;
+
+      db.SaveChanges();
+
+      return updatedData;
     }
 
   }
