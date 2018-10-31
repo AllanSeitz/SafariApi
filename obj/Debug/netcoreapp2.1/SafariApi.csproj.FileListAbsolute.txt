@@ -1,0 +1,14 @@
+/Users/allan/sdg/unit-2/SafariApi/bin/Debug/netcoreapp2.1/SafariApi.deps.json
+/Users/allan/sdg/unit-2/SafariApi/bin/Debug/netcoreapp2.1/SafariApi.runtimeconfig.json
+/Users/allan/sdg/unit-2/SafariApi/bin/Debug/netcoreapp2.1/SafariApi.runtimeconfig.dev.json
+/Users/allan/sdg/unit-2/SafariApi/bin/Debug/netcoreapp2.1/SafariApi.dll
+/Users/allan/sdg/unit-2/SafariApi/bin/Debug/netcoreapp2.1/SafariApi.pdb
+/Users/allan/sdg/unit-2/SafariApi/obj/Debug/netcoreapp2.1/SafariApi.csprojAssemblyReference.cache
+/Users/allan/sdg/unit-2/SafariApi/obj/Debug/netcoreapp2.1/SafariApi.csproj.CoreCompileInputs.cache
+/Users/allan/sdg/unit-2/SafariApi/obj/Debug/netcoreapp2.1/SafariApi.RazorAssemblyInfo.cache
+/Users/allan/sdg/unit-2/SafariApi/obj/Debug/netcoreapp2.1/SafariApi.RazorAssemblyInfo.cs
+/Users/allan/sdg/unit-2/SafariApi/obj/Debug/netcoreapp2.1/SafariApi.AssemblyInfoInputs.cache
+/Users/allan/sdg/unit-2/SafariApi/obj/Debug/netcoreapp2.1/SafariApi.AssemblyInfo.cs
+/Users/allan/sdg/unit-2/SafariApi/obj/Debug/netcoreapp2.1/SafariApi.RazorTargetAssemblyInfo.cache
+/Users/allan/sdg/unit-2/SafariApi/obj/Debug/netcoreapp2.1/SafariApi.dll
+/Users/allan/sdg/unit-2/SafariApi/obj/Debug/netcoreapp2.1/SafariApi.pdb
