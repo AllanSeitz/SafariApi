@@ -19,6 +19,12 @@ namespace SafariApi.Controllers
       var db = new SeenAnimalsContext();
       return db.SeenAnimals.OrderBy(o => o.CountOfTimesSeen);
     }
+    [HttpGet("{location}")]
+    public IEnumerable<SeenAnimals> GetByLocation(string location)
+    {
+      var db = new SeenAnimalsContext();
+      return db.SeenAnimals.Where(w => w.LocationOfLastSeen.ToLower() == location.ToLower());
+    }
     [HttpPost]
     public ActionResult<SeenAnimals> Post([FromBody] SeenAnimals seenAnimals)
     {

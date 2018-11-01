@@ -34,10 +34,10 @@ namespace SafariApi.Migrations
                     b.ToTable("SeenAnimals");
 
                     b.HasData(
-                        new { Id = 1, CountOfTimesSeen = 4, LocationOfLastSeen = "Tent", Species = "Lion" },
-                        new { Id = 2, CountOfTimesSeen = 7, LocationOfLastSeen = "Field", Species = "Tiger" },
-                        new { Id = 3, CountOfTimesSeen = 1, LocationOfLastSeen = "Tree", Species = "Bear" },
-                        new { Id = 4, CountOfTimesSeen = 41, LocationOfLastSeen = "Lake", Species = "Buffalo" }
+                        new { Id = -1, CountOfTimesSeen = 4, LocationOfLastSeen = "Tent", Species = "Lion" },
+                        new { Id = -2, CountOfTimesSeen = 7, LocationOfLastSeen = "Field", Species = "Tiger" },
+                        new { Id = -3, CountOfTimesSeen = 1, LocationOfLastSeen = "Tree", Species = "Bear" },
+                        new { Id = -4, CountOfTimesSeen = 41, LocationOfLastSeen = "Lake", Species = "Buffalo" }
                     );
                 });
 #pragma warning restore 612, 618

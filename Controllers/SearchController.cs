@@ -21,5 +21,6 @@ namespace SafariApi.Controllers
       return results;
       //https://localhost:5001/api/search?searchTerm=Li
     }
+
   }
 }

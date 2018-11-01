@@ -28,10 +28,10 @@ namespace SafariApi
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
       modelBuilder.Entity<SeenAnimals>().HasData(
-new SeenAnimals { Id = 1, Species = "Lion", CountOfTimesSeen = 4, LocationOfLastSeen = "Tent" },
-new SeenAnimals { Id = 2, Species = "Tiger", CountOfTimesSeen = 7, LocationOfLastSeen = "Field" },
-new SeenAnimals { Id = 3, Species = "Bear", CountOfTimesSeen = 1, LocationOfLastSeen = "Tree" },
-new SeenAnimals { Id = 4, Species = "Buffalo", CountOfTimesSeen = 41, LocationOfLastSeen = "Lake" }
+        new SeenAnimals { Id = -1, Species = "Lion", CountOfTimesSeen = 4, LocationOfLastSeen = "Tent" },
+        new SeenAnimals { Id = -2, Species = "Tiger", CountOfTimesSeen = 7, LocationOfLastSeen = "Field" },
+        new SeenAnimals { Id = -3, Species = "Bear", CountOfTimesSeen = 1, LocationOfLastSeen = "Tree" },
+        new SeenAnimals { Id = -4, Species = "Buffalo", CountOfTimesSeen = 41, LocationOfLastSeen = "Lake" }
 );
 
     }
